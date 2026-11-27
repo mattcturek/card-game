@@ -65,7 +65,8 @@ function renderPlayerDeal(
   const draws = el("div", { class: "setup-draws" });
 
   // Order matches rulebook setup: Ship → Hero → Mission → Main Deck
-  draws.append(
+  const opener = el("div", { class: "setup-opener-row" });
+  opener.append(
     revealCard({
       step: "1 · Ship",
       title: p.ship.name,
@@ -88,6 +89,7 @@ function renderPlayerDeal(
       art: null,
     }),
   );
+  draws.append(opener);
 
   const handBlock = el("div", { class: "setup-hand-block" });
   handBlock.append(
