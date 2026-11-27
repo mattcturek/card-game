@@ -1,0 +1,12 @@
+{
+  "deck": "event",
+  "tiers": {
+    "1": { "count": 20, "path": "tier-1", "type": "Tier 1 Event" },
+    "2": { "count": 20, "path": "tier-2", "type": "Tier 2 Event" },
+    "3": { "count": 20, "path": "tier-3", "type": "Tier 3 Event" }
+  },
+  "docs": {
+    "rules": "docs/decks-60.md",
+    "artIndex": "docs/card-art-index.md"
+  }
+}

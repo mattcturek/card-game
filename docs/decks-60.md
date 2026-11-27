@@ -5,7 +5,7 @@ Last updated: 2026-11-26 (America/Chicago)
 Status: **LOCKED** — 20 Tier 1 / 20 Tier 2 / 20 Tier 3.
 
 Style: Dockmaster’s Tip. Type line = Tier N Event. + positive / − negative.
-Art batch: in progress under media/cards/.
+Art batch: complete — see docs/card-art-index.md (60/60).
 
 ## Tier 1 Event (20) — mild
 
