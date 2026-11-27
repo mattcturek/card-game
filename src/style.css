@@ -295,3 +295,214 @@ button.danger {
   border-radius: 8px;
   font-weight: 700;
 }
+
+/* —— Setup / opening deal screen —— */
+#app.mode-setup {
+  max-width: 1400px;
+}
+
+.setup-page {
+  animation: setup-in 0.45s ease-out;
+}
+
+@keyframes setup-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.setup-hero {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.setup-kicker {
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.setup-hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  letter-spacing: 0.01em;
+}
+
+.setup-lead {
+  margin: 0;
+  max-width: 46rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.setup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.setup-begin {
+  font-size: 1rem;
+  padding: 0.6rem 1.15rem;
+}
+
+.setup-players {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 960px) {
+  .setup-players {
+    grid-template-columns: 1fr;
+  }
+}
+
+.setup-player {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.setup-player.p1 {
+  box-shadow: inset 3px 0 0 var(--p1);
+}
+
+.setup-player.p2 {
+  box-shadow: inset 3px 0 0 var(--p2);
+}
+
+.setup-player h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+.setup-player.p1 h2 {
+  color: var(--p1);
+}
+
+.setup-player.p2 h2 {
+  color: var(--p2);
+}
+
+.setup-stats {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.85rem;
+}
+
+.setup-draws {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.setup-hand-block h3 {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.setup-hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.setup-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.55rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(6, 12, 24, 0.72);
+}
+
+.setup-card.compact {
+  width: calc(50% - 0.25rem);
+  min-width: 140px;
+  flex: 1 1 140px;
+  max-width: 200px;
+}
+
+.setup-card-step {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.setup-card-art {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #0a1424;
+}
+
+.setup-card-art.missing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  min-height: 88px;
+}
+
+.setup-card.compact .setup-card-art {
+  aspect-ratio: 3 / 4;
+  max-height: 160px;
+}
+
+.setup-card-type {
+  font-size: 0.7rem;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.setup-card-title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.setup-card.compact .setup-card-title {
+  font-size: 0.88rem;
+}
+
+.setup-card-body {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+.setup-card.compact .setup-card-body {
+  font-size: 0.72rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.setup-footnote {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}

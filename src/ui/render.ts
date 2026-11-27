@@ -20,6 +20,8 @@ const HEX_SIZE = 22;
 export type GameController = {
   getState: () => GameState;
   setState: (s: GameState) => void;
+  /** Redeal and return to the setup / opening-draw screen. */
+  returnToSetup?: () => void;
 };
 
 export function renderApp(root: HTMLElement, ctrl: GameController): void {
@@ -250,7 +252,8 @@ function renderControls(state: GameState, ctrl: GameController): HTMLElement {
 
   const reset = el("button", { class: "danger", type: "button" }, "New Game");
   reset.addEventListener("click", () => {
-    window.location.reload();
+    if (ctrl.returnToSetup) ctrl.returnToSetup();
+    else window.location.reload();
   });
   controls.append(reset);
 

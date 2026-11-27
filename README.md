@@ -6,6 +6,8 @@ Sci-fi RPG card game (TNG × Firefly tone).
 
 Hotseat 2-player browser prototype of the core loop (hex board, ships/heroes/missions, main deck, events). Unclear rules are stubbed and labeled **TBD** in-game.
 
+Opens on a **setup / deal screen** showing each player’s Ship, Hero, Mission, and opening Main Deck hand (with art from `cards/` when available). Click **Begin game** to play.
+
 ```bash
 npm install
 npm run dev
