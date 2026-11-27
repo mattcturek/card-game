@@ -10,3 +10,11 @@ cards/
 ```
 
 Filenames: `card-t{N}-{##}-{slug}.jpg` match the locked deck list.
+
+## Main deck
+
+```
+cards/main/   # 50 Main Deck arts (main-01-…jpg)
+```
+
+Data: [`docs/main-deck-50.md`](../docs/main-deck-50.md) · Index: [`docs/main-deck-art-index.md`](../docs/main-deck-art-index.md)

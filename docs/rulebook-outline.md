@@ -1,28 +1,21 @@
-# Rulebook Outline (streamlined)
+# Rulebook Outline
 
 Last updated: 2026-11-26 (America/Chicago)
 
-## Game Rules (locked this pass)
+## Setup
+1. Draw **1 Ship** (Ship Deck — 10 cards)
+2. Draw **1 Hero** (Hero Deck — 10 cards)
+3. Draw **1 Mission** (secret; win condition)
+4. Draw **5** from **Main Deck**
+5. Board: hex + Milky Way background
 
-### Setup
-- Draw **1 Ship** from the **Ship Deck**
-- Draw **1 Hero** from the **Hero Deck**
-- Draw **1 secret Mission** from the **Mission Deck**
-- Board: hexagonal tiles; background = Milky Way from Earth; use the earlier board mockup ([board](board.md))
+## Turn
+1. **Draw phase** (start of turn)
+2. **3 phases** — each: Move, Attack, Scan, or Hide
 
-### Turn structure
-- Players take turns
-- Each turn has **3 phases** (Phase 1, 2, 3 — unnamed beyond that)
-- In **each** phase you may take **any one** action:
-  - **Move**
-  - **Attack**
-  - **Scan**
-  - **Hide**
-- Action details: outline later
+## Win / lose
+- Win: complete secret Mission first
+- Lose: ship destroyed
 
-### Win / lose
-- **Win:** complete your secret mission before an opponent does
-- **Lose:** your ship is destroyed (or opponent completes theirs first)
-
-## Deferred
-- Full definitions of Move, Attack, Scan, Hide
+## Decks
+- [Ships](ships.md) · [Heroes](heroes.md) · [Main deck](main-deck.md) · [Events 60](decks-60.md)
