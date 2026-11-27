@@ -1,12 +1,46 @@
 {
-  "deck": "event",
-  "tiers": {
-    "1": { "count": 20, "path": "tier-1", "type": "Tier 1 Event" },
-    "2": { "count": 20, "path": "tier-2", "type": "Tier 2 Event" },
-    "3": { "count": 20, "path": "tier-3", "type": "Tier 3 Event" }
-  },
-  "docs": {
-    "rules": "docs/decks-60.md",
-    "artIndex": "docs/card-art-index.md"
+  "decks": {
+    "event": {
+      "tiers": {
+        "1": { "count": 20, "path": "tier-1", "type": "Tier 1 Event" },
+        "2": { "count": 20, "path": "tier-2", "type": "Tier 2 Event" },
+        "3": { "count": 20, "path": "tier-3", "type": "Tier 3 Event" }
+      },
+      "docs": {
+        "rules": "docs/decks-60.md",
+        "artIndex": "docs/card-art-index.md"
+      }
+    },
+    "main": {
+      "count": 50,
+      "path": "main",
+      "typeLineByFile": true,
+      "docs": {
+        "rules": "docs/main-deck-50.md",
+        "artIndex": "docs/main-deck-art-index.md"
+      }
+    },
+    "heroes": {
+      "count": 10,
+      "path": "heroes",
+      "type": "Hero",
+      "filenamePattern": "hero-{nn}-{slug}.jpg",
+      "docs": {
+        "rules": "docs/heroes.md",
+        "artIndex": "docs/heroes-art-index.md"
+      },
+      "cards": [
+        { "n": 1, "slug": "captain-rhea-vale", "name": "Captain Rhea Vale", "file": "heroes/hero-01-captain-rhea-vale.jpg" },
+        { "n": 2, "slug": "doc-maren-quill", "name": "Doc Maren Quill", "file": "heroes/hero-02-doc-maren-quill.jpg" },
+        { "n": 3, "slug": "gunner-jax-holt", "name": "Gunner Jax Holt", "file": "heroes/hero-03-gunner-jax-holt.jpg" },
+        { "n": 4, "slug": "pilot-sera-nyx", "name": "Pilot Sera Nyx", "file": "heroes/hero-04-pilot-sera-nyx.jpg" },
+        { "n": 5, "slug": "ops-kade-morrow", "name": "Ops Kade Morrow", "file": "heroes/hero-05-ops-kade-morrow.jpg" },
+        { "n": 6, "slug": "broker-lina-cass", "name": "Broker Lina Cass", "file": "heroes/hero-06-broker-lina-cass.jpg" },
+        { "n": 7, "slug": "scout-torin-ash", "name": "Scout Torin Ash", "file": "heroes/hero-07-scout-torin-ash.jpg" },
+        { "n": 8, "slug": "engineer-milo-vex", "name": "Engineer Milo Vex", "file": "heroes/hero-08-engineer-milo-vex.jpg" },
+        { "n": 9, "slug": "diplomat-ari-sol", "name": "Diplomat Ari Sol", "file": "heroes/hero-09-diplomat-ari-sol.jpg" },
+        { "n": 10, "slug": "shadow-ren-cole", "name": "Shadow Ren Cole", "file": "heroes/hero-10-shadow-ren-cole.jpg" }
+      ]
+    }
   }
 }

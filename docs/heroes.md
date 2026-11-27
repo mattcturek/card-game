@@ -1,4 +1,4 @@
-# Hero Deck (10) — LOCKED draft
+# Hero Deck (10) — LOCKED
 
 | # | Name | Ability |
 |---|------|---------|

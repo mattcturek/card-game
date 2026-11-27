@@ -18,3 +18,13 @@ cards/main/   # 50 Main Deck arts (main-01-…jpg)
 ```
 
 Data: [`docs/main-deck-50.md`](../docs/main-deck-50.md) · Index: [`docs/main-deck-art-index.md`](../docs/main-deck-art-index.md)
+
+## Hero deck
+
+```
+cards/heroes/   # 10 Hero arts (hero-01-…jpg)
+```
+
+Data: [`docs/heroes.md`](../docs/heroes.md) · Index: [`docs/heroes-art-index.md`](../docs/heroes-art-index.md)
+
+Filenames: `hero-{##}-{slug}.jpg`. Type line: **Hero**. Style: Dockmaster Tip frame; sci-fi crew portraits.
