@@ -19,7 +19,7 @@ npm run build
 
 ### Prototype loop
 
-1. **Setup** — each player gets 1 random Ship, 1 Hero, 1 Mission (5 locked missions), and 5 Main Deck cards (Courier draws 6). Start at center hex with **20 HP / 20 AP**.
+1. **Setup** — each player gets 1 random Ship, 1 Hero, 1 Mission (5 locked missions), and 5 Main Deck cards (Courier draws 6). Start at center hex with **20 HP / 20 AP** on a hex map of **radius 8** (**217** tiles; was radius 3 / 37).
 2. **Turn** — Draw 1 → **3 phases**; each phase choose **Move | Attack | Scan | Hide**.
 3. **Move** — roll d6 (even = 2 hex, odd = 1); optional skip. Landing on tile **1/2/3** draws that Tier Event (stub effects).
 4. **Scan** — mark current + adjacent tiles scanned; breaks Hide.

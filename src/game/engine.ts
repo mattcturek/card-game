@@ -3,6 +3,7 @@ import { HEROES } from "../data/heroes";
 import { MAIN_DECK, type MainCard } from "../data/mainDeck";
 import { MISSIONS } from "../data/missions";
 import { SHIPS } from "../data/ships";
+import { BOARD_RADIUS } from "./constants";
 import {
   hexDistance,
   hexesInRadius,
@@ -12,7 +13,7 @@ import {
 } from "./hex";
 import type { GameState, PhaseAction, PlayerState, Tile } from "./types";
 
-export const BOARD_RADIUS = 3;
+export { BOARD_RADIUS };
 const MAX_HP = 20;
 const MAX_AP = 20;
 const STARTING_HAND = 5;
@@ -70,19 +71,19 @@ function buildBoard(): Map<string, Tile> {
     }
   }
 
-  // Friendly labels for multi-stop mission
-  const pickup = tiles.get("-3,0");
-  if (pickup) pickup.label = "Clinic Pickup";
-  const dropoff = tiles.get("3,0");
-  if (dropoff) dropoff.label = "Mining Dropoff";
-  const station = tiles.get("3,-3");
-  if (station) station.label = "Station 9";
-  const ghost = tiles.get("-2,3");
-  if (ghost) ghost.label = "Derelict Ship";
-  const helios = tiles.get("0,-3");
-  if (helios) helios.label = "Helios Refinery";
-  const red = tiles.get("-3,3");
-  if (red) red.label = "Red Dust";
+  // Friendly labels for known mission hexes (keys scale with BOARD_RADIUS)
+  const labelByKey: Record<string, string> = {
+    [`${BOARD_RADIUS},${-BOARD_RADIUS}`]: "Station 9",
+    [`${-BOARD_RADIUS},0`]: "Clinic Pickup",
+    [`${BOARD_RADIUS},0`]: "Mining Dropoff",
+    [`${-Math.floor((BOARD_RADIUS * 2) / 3)},${BOARD_RADIUS}`]: "Derelict Ship",
+    [`0,${-BOARD_RADIUS}`]: "Helios Refinery",
+    [`${-BOARD_RADIUS},${BOARD_RADIUS}`]: "Red Dust",
+  };
+  for (const [key, label] of Object.entries(labelByKey)) {
+    const tile = tiles.get(key);
+    if (tile) tile.label = label;
+  }
 
   return tiles;
 }

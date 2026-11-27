@@ -14,7 +14,8 @@ import {
 import { hexPolygonPoints, hexToPixel } from "../game/hex";
 import type { GameState, PhaseAction } from "../game/types";
 
-const HEX_SIZE = 32;
+/** Slightly smaller hexes so the larger radius-8 map stays usable with scroll. */
+const HEX_SIZE = 22;
 
 export type GameController = {
   getState: () => GameState;
@@ -127,8 +128,9 @@ function renderBoard(state: GameState, ctrl: GameController): HTMLElement {
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-  svg.setAttribute("width", String(Math.min(640, width)));
-  svg.setAttribute("height", String(Math.min(560, height)));
+  // Show more of the enlarged map; panel still scrolls if needed
+  svg.setAttribute("width", String(Math.min(920, width)));
+  svg.setAttribute("height", String(Math.min(820, height)));
 
   for (const tile of state.tiles.values()) {
     const { x, y } = hexToPixel(tile.hex, HEX_SIZE);

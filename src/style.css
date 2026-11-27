@@ -152,6 +152,7 @@ header.top .sub {
   justify-content: center;
   overflow: auto;
   padding: 0.5rem 0;
+  max-height: min(860px, 78vh);
 }
 
 .board-wrap svg {
